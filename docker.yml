@@ -1,0 +1,10 @@
+version: '3'
+services:
+  tests:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: ["bash", "-lc", "bundle exec cucumber"]
